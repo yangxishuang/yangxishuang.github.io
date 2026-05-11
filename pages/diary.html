@@ -3,78 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>联系我</title>
+    <title>日记</title>
     <link rel="stylesheet" href="../stylesheet/index.css">
     <style>
-        .contact-card {
+        .diary-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             padding: 50px 40px;
-            text-align: center;
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
             backdrop-filter: blur(10px);
-            max-width: 500px;
+            max-width: 800px;
             margin: 40px auto;
         }
 
-        .contact-title {
+        .diary-title {
             font-size: 2rem;
             color: #2d3748;
-            margin-bottom: 30px;
             font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            padding: 15px 0;
-            border-bottom: 1px solid #e2e8f0;
-            font-size: 1.1rem;
+        .diary-desc {
             color: #4a5568;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 28px;
+            text-align: center;
         }
 
-        .contact-item:last-child {
-            border-bottom: none;
+        .diary-entry {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 20px;
+            margin-top: 20px;
         }
 
-        .contact-icon {
-            font-size: 1.5rem;
+        .diary-entry:first-of-type {
+            border-top: none;
+            padding-top: 0;
+            margin-top: 0;
         }
 
-        .contact-link {
-            color: #667eea;
-            text-decoration: none;
-            transition: all 0.3s ease;
+        .diary-date {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 14px;
         }
 
-        .contact-link:hover {
-            color: #764ba2;
-            text-decoration: underline;
+        .diary-text {
+            color: #4a5568;
+            font-size: 1rem;
+            line-height: 1.9;
         }
 
         @media screen and (max-width: 768px) {
-            .contact-card {
+            .diary-card {
                 padding: 30px 20px;
                 margin: 20px auto;
             }
 
-            .contact-title {
-                font-size: 1.5rem;
+            .diary-title {
+                font-size: 1.6rem;
             }
 
-            .contact-item {
-                flex-direction: column;
-                gap: 8px;
-                font-size: 1rem;
+            .diary-desc {
+                font-size: 0.98rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .diary-title {
+                font-size: 1.4rem;
+            }
+
+            .diary-entry {
+                margin-top: 18px;
+                padding-top: 18px;
             }
         }
 
         @media (orientation: landscape) and (max-height: 500px) {
-            .contact-card {
+            .diary-card {
                 padding: 20px;
                 margin: 10px auto;
+            }
+
+            .diary-title {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -93,22 +113,32 @@
                 <li><a href="https://blog.csdn.net/m0_46451927?spm=1000.2115.3001.10640" target="_blank">我的CSDN</a></li>
                 <li><a href="https://github.com/yangxishuang" target="_blank">我的GitHub</a></li>
                 <li><a href="https://space.bilibili.com/74408535?spm_id_from=333.1387.fans.user_card.click" target="_blank">我的bilibili</a></li>
-                <li><a href="pages/aboutme.html" class="active">联系我</a></li>
+                <li><a href="aboutme.html">联系我</a></li>
             </ul>
         </div>
     </nav>
 
     <main class="main-content">
-        <div class="contact-card">
-            <h1 class="contact-title">📬 联系方式</h1>
-            <div class="contact-item">
-                <span class="contact-icon">✉️</span>
-                <a class="contact-link" href="mailto:Yangcysun@outlook.com">Yangcysun@outlook.com</a>
-            </div>
-            <div class="contact-item">
-                <span class="contact-icon">💬</span>
-                <span>QQ：2032388414</span>
-            </div>
+        <div class="diary-card">
+            <h1 class="diary-title">📖 个人日记</h1>
+            <p class="diary-desc">
+                这里用来记录一些学习、生活与创作的片段。<br>
+                之后可以直接在这里补充每一篇日记的正文内容。
+            </p>
+
+            <article class="diary-entry">
+                <div class="diary-date">2025-01-01</div>
+                <p class="diary-text">
+                    示例日记：新年开始，先把站点的结构整理一下，后续再逐步补充更多内容。
+                </p>
+            </article>
+
+            <article class="diary-entry">
+                <div class="diary-date">2025-02-14</div>
+                <p class="diary-text">
+                    示例日记：今天记录一段学习前端的心得，把页面风格统一整理得更舒服一些。
+                </p>
+            </article>
         </div>
     </main>
 
